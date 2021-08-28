@@ -87,6 +87,15 @@ const internQuestions = [
     },
 ]
 
+//user can add another employee
+const anotherOne = [
+    {
+        type: 'list',
+        name: 'nextEmployee',
+        message: 'Select the type of team member you would like to add next, or else select "Done" to generate your team ',
+        choices: ['Engineer', 'Intern', 'Done']
+    }
+]
 function init() {
     managerPromt();
 }
