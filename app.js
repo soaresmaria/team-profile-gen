@@ -37,6 +37,31 @@ const managerQuestions = [
     },
 ]
 
+//Engineer: 
+const engineerQuestions = [
+
+    {
+        type: 'input',
+        name: 'engineerName',
+        message: 'Enter the name of the engineer'
+    },
+    {
+        type: 'input',
+        name: 'engineerID',
+        message: 'Enter the ID number for this engineer'
+    },
+    {
+        type: 'input',
+        name: 'engineerEmail',
+        message: 'Enter email adress of the engineer'
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Enter the engineers GitHub user name'
+    },
+]
+
 function init() {
     managerPromt();
 }
