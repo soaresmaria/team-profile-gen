@@ -26,7 +26,7 @@ To test this app, open it in your IDE and go the root folder 'team-profile-gen' 
 ## Link
 Here's a link of the walk through
 
-https://drive.google.com/file/d/1o4tlI7zHzVTim4vlmAhWgzS_FDPD9DgQ/view
+
 
 ## Screenshot
 <img width="858" alt="Screen Shot 2021-08-28 at 1 50 53 AM" src="https://user-images.githubusercontent.com/82120954/131207942-9b191a7f-bf8d-4c8b-8f0a-453ffa2e7cd3.png">
