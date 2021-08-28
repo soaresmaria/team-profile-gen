@@ -62,6 +62,31 @@ const engineerQuestions = [
     },
 ]
 
+//Intern:
+const internQuestions = [
+
+    {
+        type: 'input',
+        name: 'internName',
+        message: 'Enter the name of the intern'
+    },
+    {
+        type: 'input',
+        name: 'internID',
+        message: 'Enter the ID number for the intern',
+    },
+    {
+        type: 'input',
+        name: 'internEmail',
+        message: 'Enter the email adress of the intern'
+    },
+    {
+        type: 'input',
+        name: 'school',
+        message: 'Enter the school of the intern',
+    },
+]
+
 function init() {
     managerPromt();
 }
