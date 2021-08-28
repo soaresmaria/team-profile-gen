@@ -140,12 +140,12 @@ function managerPromt() {
 //Function for Engineer prompts
 function engineerPromt() {
     inquirer.prompt(engineerQuestions).then((response) => {
-        let name = response. engiName;
-        let id = response.engiID;
-        let email = response.engiEmail;
+        let name = response. engineerName;
+        let id = response.engineerID;
+        let email = response.engineerEmail;
         let github = response.github;
         // creats an object for this manager 
-        const engineer = new Engineer (name, id, email, github);    
+        const engineer = new Engineer(name, id, email, github);    
         teamArray.push(engineer);
         console.log(teamArray);
     
@@ -169,7 +169,16 @@ function internPromt() {
     })
 }
 
-
+//this function generates the file
+function makeTeam() {
+    fs.writeFile(outputPath, render(teamArray), function(err) {
+    if (err) { 
+        return console.log(err)
+    }
+    })
+    
+    }
+    
 //calls the initiating function 
 init();
 
