@@ -100,6 +100,25 @@ function init() {
     managerPromt();
 }
 
+//This will prompt to add next employee
+function next() {
+    inquirer.prompt(anotherOne).then((response) => {
+        
+        console.log(response);
+        switch (response.nextEmployee) {
+            case 'Engineer':
+                engineerPromt();
+                break;
+            case 'Intern':
+                internPromt();
+                break;
+            case 'Done':
+                console.log('Creating your team!')
+                makeTeam();
+        }
+    })
+}
+
 //will call the manager questions first
 function managerPromt() {
     inquirer.prompt(managerQuestions).then((response) => {
@@ -118,6 +137,37 @@ function managerPromt() {
     })
 }
 
+//Function for Engineer prompts
+function engineerPromt() {
+    inquirer.prompt(engineerQuestions).then((response) => {
+        let name = response. engiName;
+        let id = response.engiID;
+        let email = response.engiEmail;
+        let github = response.github;
+        // creats an object for this manager 
+        const engineer = new Engineer (name, id, email, github);    
+        teamArray.push(engineer);
+        console.log(teamArray);
+    
+        next();
+    })
+}
+
+function internPromt() {
+    inquirer.prompt(internQuestions).then((response) => {
+
+        let name = response. internName;
+        let id = response.internID;
+        let email = response.internEmail;
+        let school = response.school;
+
+        const intern = new Intern (name, id, email, school);
+        teamArray.push(intern);
+        console.log(teamArray);
+
+        next();
+    })
+}
 
 
 //calls the initiating function 
